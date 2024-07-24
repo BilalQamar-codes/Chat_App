@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const schema = mongoose.Schema({
+const userSchema = mongoose.Schema({
     name : {
         type : String,
         required : true
     },
-    bio : {type : string},
+    bio : {type : String},
     phoneNumber : {
         type : String,
         required : true
@@ -20,4 +20,5 @@ const schema = mongoose.Schema({
     }
 }, {timeStamp : true});
 
-const User = mongoose.Model("User",schema)
+const User = mongoose.model("User",userSchema);
+module.exports = User;

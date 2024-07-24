@@ -1,61 +1,98 @@
 .profileContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: auto;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  .profileContainer {
+    flex-direction: row;
+    max-width: 800px;
+    padding: 40px; /* Increase padding for larger screens */
   }
-  
-  @media (min-width: 600px) {
-    .profileContainer {
-      flex-direction: row;
-      max-width: 800px;
-    }
+}
+
+@media (min-width: 1000px) {
+  .profileContainer {
+    max-width: 1200px; /* Increase the max-width for larger screens */
   }
-  
+}
+
+.profilePicture {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 600px) {
   .profilePicture {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 150px; /* Increase size for larger screens */
+    height: 150px; /* Increase size for larger screens */
   }
-  
-  @media (min-width: 600px) {
-    .profilePicture {
-      margin-bottom: 0;
-      margin-right: 20px;
-    }
+}
+
+@media (min-width: 1000px) {
+  .profilePicture {
+    width: 200px; /* Further increase size for larger screens */
+    height: 200px; /* Further increase size for larger screens */
   }
-  
+}
+
+.userDetails {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 600px) {
   .userDetails {
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+    text-align: left;
+    padding: 20px; /* Add padding for larger screens */
   }
-  
-  @media (min-width: 600px) {
-    .userDetails {
-      text-align: left;
-    }
-  }
-  
+}
+
+.userName {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem; /* Increase font size */
+}
+
+@media (min-width: 600px) {
   .userName {
-    margin: 0 0 10px 0;
+    font-size: 2rem; /* Further increase font size for larger screens */
   }
-  
+}
+
+.userEmail {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 1rem; /* Increase font size */
+}
+
+@media (min-width: 600px) {
   .userEmail {
-    margin: 0 0 10px 0;
-    color: #666;
+    font-size: 1.25rem; /* Further increase font size for larger screens */
   }
-  
+}
+
+.userBio {
+  margin: 0;
+  color: #333;
+  font-size: 1rem; /* Increase font size */
+}
+
+@media (min-width: 600px) {
   .userBio {
-    margin: 0;
-    color: #333;
+    font-size: 1.25rem; /* Further increase font size for larger screens */
   }
-  
+}

@@ -1,17 +1,19 @@
-const express = require('express')
-const bodyparser = require('body-parser')
-const connection = require('./utils/db')
-const userRoutes = require('./routes/userRoutes')
+const express = require('express');
+const bodyparser = require('body-parser');
+const connection = require('./utils/db');
+const userRoutes = require('./routes/userRoutes');
 const port = 3005;
 
-const app = express()
+const app = express();
 
-app.use(bodyparser.json())
+app.use(bodyparser.json());
+app.use('/user', userRoutes);
 
-app.get('/',(req, res)=> {
-    res.status(200).send(" Welcome to my web app.")
-})
-app.use("user/", userRoutes)
+app.get('/', (req, res) => {
+  res.status(200).send("Welcome to my web app.");
+});
+
+// Corrected route prefix
 
 try {
     app.listen(port, ()=>{
