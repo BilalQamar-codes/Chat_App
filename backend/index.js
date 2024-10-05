@@ -2,12 +2,14 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const connection = require('./utils/db');
 const userRoutes = require('./routes/userRoutes');
+const chatRoutes = require('./routes/chatRoutes')
 const port = 3005;
 
 const app = express();
 
 app.use(bodyparser.json());
 app.use('/user', userRoutes);
+app.use('/chat',chatRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).send("Welcome to my web app.");

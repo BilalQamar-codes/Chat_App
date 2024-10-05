@@ -5,6 +5,7 @@ const schema = mongoose.Schema({
     isGroupChat: {type: Boolean},
     users :[{
         type: mongoose.Schema.Types.ObjectId,
+        required : true,
         ref: "User"
     }],
     latestMessage: {
