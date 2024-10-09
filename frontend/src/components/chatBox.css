@@ -1,0 +1,43 @@
+.chat-container {
+    height: 60px; /* Reduced height of the chat box */
+    width: 350px; /* Adjusted width slightly for a compact look */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px; /* Added margin between chat boxes */
+    background-color: #f9f9f9;
+}
+
+.img {
+    height: 50px; /* Adjusted height */
+    width: 50px;  /* Adjusted width */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image does not overflow the container */
+    margin-right: 15px; /* Adds space between image and details */
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the image fits within the circular frame */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.name {
+    font-weight: 600;
+    font-size: medium;
+}
+
+.last-message {
+    color: gray;
+    font-size: small;
+}

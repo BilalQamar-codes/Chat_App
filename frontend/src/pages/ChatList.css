@@ -1,0 +1,53 @@
+/* Container for both chat list and chat area */
+.chatlist {
+    display: flex;
+    flex-direction: row; /* Change to row to place chat list and chat area side by side */
+    height: 100vh; /* Full height */
+}
+
+/* Chat list on the left */
+.chats {
+    width: 30%; /* Takes up 30% of the width */
+    border-right: 1px solid #ccc; /* To visually separate the chat list and chat area */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Chat area on the right */
+.chatarea {
+    width: 70%; /* Takes up 70% of the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.messages {
+    flex-grow: 1; /* Allows the messages area to grow and take up available space */
+    padding: 20px;
+    overflow-y: auto; /* Enable scroll for messages if there are many */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.type-message {
+    display: flex;
+    align-items: center;
+}
+
+.message-box {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
