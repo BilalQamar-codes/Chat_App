@@ -6,13 +6,14 @@ function test(req, res){
 }
 
 async function fetchChat(req, res) {
-    if (!req.body.userId){
+    console.log(req.params)
+    if (!req.params.id){
         res.status(500).json("Valid userId is required.") 
     }
 
     try{
         const chats = await Chat.find({
-            users : req.body.userId
+            users : req.params.id
         })
         res.status(200).send(chats);
     }

@@ -3,7 +3,7 @@ const User = require('../models/users')
 
 async function login(req,res){
     const {name,email,password} = req.body;
-    if (!name || !email || !password){
+    if ( !email || !password){
         res.status(400).send("A field is missing!")
     }
 
@@ -14,7 +14,8 @@ async function login(req,res){
 
     if (isUser){
      res.status(200).json({
-        messege : "you have successfully logged In !"
+        messege : "you have successfully logged In !",
+        user: isUser
      });
     }
 
@@ -27,6 +28,7 @@ async function login(req,res){
 }
 
 const register = async (req, res) => {
+    // console.log(req.body);
     try {
       const user = await User.findOne({ email: req.body.email });
       if (user) {
@@ -36,7 +38,7 @@ const register = async (req, res) => {
       const newUser = new User(req.body);
       await newUser.save();
 
-      res.status(201).json({ message: 'User registered successfully' });
+      res.status(200).json({ message: 'User registered successfully' });
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

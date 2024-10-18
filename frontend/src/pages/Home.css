@@ -1,0 +1,122 @@
+/* Home.css */
+.home-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .hero-section {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .signup-btn, .login-btn {
+    background-color: #fff;
+    color: #4facfe;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 45%;
+    max-width: 200px;
+    min-width: 120px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .login-btn:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .features-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .features-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features-section li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2em;
+    }
+  
+    .hero-section p {
+      font-size: 1em;
+    }
+  
+    .signup-btn, .login-btn {
+      width: 80%;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 40px 10px;
+    }
+  
+    .features-section {
+      padding: 30px 10px;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+    }
+  
+    .signup-btn, .login-btn {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  }
+  
