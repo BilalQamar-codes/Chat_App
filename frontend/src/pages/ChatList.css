@@ -14,6 +14,13 @@
     flex-direction: column;
 }
 
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 .search {
     width: 100%;
     padding: 10px;
@@ -21,6 +28,22 @@
     border-radius: 8px;
     border: 1px solid #ccc;
 }
+
+.message-box {
+    flex-grow: 1; /* Allow the textarea to take up available space */
+    margin-right: 10px; /* Space between the textarea and the button */
+    padding: 10px;
+    font-size: large;
+    height: 30px; /* Initial height to appear as one line */
+    min-height: 30px; /* Minimum height for the textarea */
+    max-height: 150px; /* Maximum height before enabling scroll */
+    line-height: 20px; /* Adjust line height to match the height */
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    resize: none; /* Prevent manual resizing */
+    overflow-y: auto; /* Enable vertical scroll when content exceeds max-height */
+}
+
 
 /* Chat area on the right */
 .chatarea {
@@ -42,6 +65,7 @@
 .type-message {
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .message-box {
@@ -50,4 +74,36 @@
     border-radius: 15px;
     border: 1px solid #ccc;
     padding: 10px;
+}
+
+/* Shrink the send button */
+.send-btn {
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    width: 80px; /* Ensure width and height are equal for circular button */
+    height: 60px; 
+    margin-top: 10px;
+    border: 1px solid rgb(184, 172, 172);
+    cursor: pointer;
+    border-radius: 100%; /* Make the button circular */
+    background-color: rgb(67, 206, 67);
+    color: white;
+}
+
+/* Add hover effect to the button */
+.type-message .send-btn:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+}
+
+/* Align the button and input field */
+.type-message {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.message-box {
+    flex-grow: 1; /* Make the input take up remaining space */
+    margin-right: 10px; /* Space between the input and the button */
 }

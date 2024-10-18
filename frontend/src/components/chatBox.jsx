@@ -2,17 +2,18 @@ import React from "react";
 import "./chatBox.css";
 import img from "../images/img.jpeg";
 
-function ChatBox(params) {
-  const details = params.details;
+function ChatBox({chatId, chatName, latestMessage, chatMembers }) {
+  const id = chatId;
+  const users = chatMembers;
+  // console.log(users);
   return (
     <div className="chat-container">
       <div className="img">
-        <img src={img} alt="" />
+        <img src="" alt="Chat" />
       </div>
-      <var />
       <div className="details">
-        <div className="name">{details.name}</div>
-        {details.lastMessege}&&{<div className="last-messege">{details.latestMessege}</div>}
+        <div className="name">{chatName}</div>
+        {latestMessage && <div className="last-message">{latestMessage}</div>}
       </div>
     </div>
   );

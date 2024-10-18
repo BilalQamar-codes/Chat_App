@@ -6,7 +6,7 @@ function test(req, res){
 }
 
 async function fetchChat(req, res) {
-    console.log(req.params)
+    // console.log(req.params.id);
     if (!req.params.id){
         res.status(500).json("Valid userId is required.") 
     }

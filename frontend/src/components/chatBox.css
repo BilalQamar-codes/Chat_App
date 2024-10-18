@@ -1,17 +1,19 @@
 .chat-container {
-    height: 60px; /* Reduced height of the chat box */
+    height: 50px; /* Reduced height of the chat box */
     width: 350px; /* Adjusted width slightly for a compact look */
     display: flex;
     align-items: center;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid rgb(121, 114, 114);
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 10px; /* Added margin between chat boxes */
     background-color: #f9f9f9;
+    cursor: pointer;
 }
 
 .img {
+    border: 1px rgb(100, 87, 87) solid; 
     height: 50px; /* Adjusted height */
     width: 50px;  /* Adjusted width */
     border-radius: 50%; /* Makes the image circular */
