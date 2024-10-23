@@ -1,4 +1,5 @@
 const Chat = require('../models/chatModel')
+const Message = require('../models/message')
 const mongoose = require('mongoose')
 
 function test(req, res){
@@ -60,6 +61,32 @@ async function createChat(req, res){
     }
 }
 
+async function fetchMessages(req, res) {
+    try {
+        const { id } = req.params;
+        console.log(id);
+        const { limit = 20, skip = 0 } = req.query; // Default limit is 20, skip is 0
+
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json("Invalid chat ID.");
+        }
+
+        // Fetch messages with pagination
+        const messages = await Message.find({
+            chat: id
+        });
+        
+        if (!messages) {
+            return res.status(404).json("No messages found.");
+        }
+
+        res.status(200).json(messages);
+    } catch (error) {
+        console.error("Error fetching messages:", error.message);
+        res.status(500).json("Could not fetch messages.");
+    }
+}
+
 async function checkForChat(userIds) {
     const chat = await Chat.find({
         users : userIds
@@ -72,4 +99,4 @@ async function checkForChat(userIds) {
         return true;
     }
 }
-module.exports = { test, fetchChat, createChat}
+module.exports = { test, fetchChat, createChat, fetchMessages}

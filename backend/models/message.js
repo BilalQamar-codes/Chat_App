@@ -13,6 +13,9 @@ const schema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Chat"
     },
+    message: {
+        type: String
+    }
     
     
 },{
