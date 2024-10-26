@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Arial', sans-serif; /* Clean font for the entire page */
+  /* background-color: #e9ecef; Soft background color for the whole page */
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height for centering */
+  padding: 40px; /* Padding around the container */
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings */
+.container h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Primary color */
+  margin-bottom: 20px; /* Spacing below the heading */
+  text-align: center; /* Center the heading */
+}
+
+.container h3 {
+  font-size: 1.8rem; /* Slightly larger than the previous */
+  color: #343a40; /* Dark gray color for subtitle */
+  margin-bottom: 30px; /* Increased spacing below */
+}
+
+/* Input Styles */
+.container input {
+  width: 100%;
+  max-width: 400px; /* Limit input width */
+  padding: 15px; /* Increased padding for comfort */
+  margin-bottom: 20px; /* Space between inputs */
+  border: 2px solid #ced4da; /* Light border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  background-color: #f9f9f9; /* Light input background */
+}
+
+/* Focus effect for input fields */
+.container input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Light shadow on focus */
+}
+
+/* Placeholder styling */
+.container input::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+/* Button Styles */
+.container button {
+  width: 100%;
+  max-width: 400px; /* Limit button width */
+  padding: 15px; /* Padding inside the button */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.container button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.container button:disabled {
+  background-color: #a0c4ff; /* Lighter color when disabled */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+.account-text {
+  margin-top: 20px; /* Space above the text */
+  font-size: 1rem; /* Font size for clarity */
+  color: #343a40; /* Dark gray color for the text */
+  text-align: center; /* Center the text */
+}
+
+.account-text span {
+  text-decoration: underline; /* Underline the link for emphasis */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+  
+  .container h3 {
+    font-size: 1.5rem; /* Smaller subtitle */
+  }
+}
+
+@media (max-width: 480px) {
+  .container input, .container button {
+    max-width: 100%; /* Full width on mobile */
+  }
+}

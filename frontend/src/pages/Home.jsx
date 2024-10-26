@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate('/login');
+    navigate('/register');
   };
 
   const handleLogInClick = () => {
